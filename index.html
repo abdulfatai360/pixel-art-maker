@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pixel Art Maker | Google Africa Scholarship 2018</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1>Lab: Pixel Art Maker</h1>
+
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker" class="sizePicker">
+      <label for="inputHeight">Grid Height:</label>
+      <input type="number" id="inputHeight" name="height" min="1" value="20" autofocus>
+
+      <label for="inputWidth">Grid Width:</label>
+      <input type="number" id="inputWidth" name="width" min="1" value="20">
+
+      <input type="submit" value="Submit Query">
+    </form>
+
+    <h2>Pick A Color</h2>
+    <input type="color" id="colorPicker" name="color">
+
+    <h2 class="design-canvas">Design Canvas</h2>
+    <table id="pixelCanvas" class="pixelCanvas"></table>
+
+    <script src="script.js" async></script>
+  </body>
+</html>
