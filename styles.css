@@ -1,7 +1,79 @@
+/*
+  GENERAL STYLE SETUP (FOR CROSS-BROWSER COMPATIBILITY PURPOSE)
+-----------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
 body {
+  margin: 0;
   text-align: center;
 }
 
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+*/
+img {
+  border: 0;
+}
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 4. Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
+*/
+input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  line-height: normal;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+*/
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`.
+*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct inability to style clickable `input` types in iOS.
+ * 2. Improve usability and consistency of cursor style between image-type `input` and others.
+*/
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*
+  PROJECT SPECIFIC STYLES
+----------------------------*/
 h1 {
   font-size: 70px;
   margin: 0.2em;
@@ -22,7 +94,6 @@ td {
 }
 
 table {
-  border-collapse: collapse;
   margin: 0 auto;
 }
 
