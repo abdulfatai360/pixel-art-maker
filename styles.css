@@ -2,13 +2,17 @@
   GENERAL STYLE SETUP (FOR CROSS-BROWSER COMPATIBILITY PURPOSE)
 -----------------------------------------------------------------*/
 html {
+  color: #222;
+  width: 100%;
+  height: 100%;
+  line-height: 1.4;
   font-size: 62.5%;
   font-family: sans-serif;
+  overflow: hidden;
 }
 
 body {
   margin: 0;
-  text-align: center;
 }
 
 /**
@@ -74,10 +78,101 @@ th {
 /*
   PROJECT SPECIFIC STYLES
 ----------------------------*/
-h1 {
-  font-size: 70px;
-  margin: 0.2em;
+* {
+  box-sizing: border-box;
 }
+
+header {
+  font-size: 2rem;
+  height: auto;
+  line-height: 60px;
+}
+
+.menu-item {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #1e7daf;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.2em;
+  border-right: 2px solid #585858;
+}
+
+.menu-item img,
+.toolbar-item .icon {
+  display: inline-block;
+  max-width: 55px;
+  max-height: 55px;
+  vertical-align: baseline;
+}
+
+.toolbar-container {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 60px;
+  height: auto;
+  background: #333333;
+}
+
+.toolbar-item {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-top: 2px solid #585858;
+  padding: 0.1em;
+  cursor: pointer;
+}
+
+.toolbar-item label {
+  opacity: 0;
+  position: absolute;
+  left: -2000px;
+}
+
+.toolbar-item input {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+}
+
+.toolbar-item input[type="number"] {
+  padding: 0.1em;
+}
+
+.toolbar-item .icon {
+  max-width: 50px;
+  max-height: 50px;
+  vertical-align: top;
+}
+
+.app-title {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: calc(100% - 60px);
+  height: 60px;
+  background: #1e7daf;
+  text-align: center;
+}
+
+.app-title h1 {
+  margin: 0;
+  letter-spacing: 1em;
+  word-spacing: 0.5em
+}
+
+main {
+  font-size: 2rem;
+}
+
+
 
 h2 {
   margin: 1em 0 0.25em;
@@ -103,8 +198,4 @@ tr {
 
 td {
   width: 20px;
-}
-
-input[type=number] {
-  width: 6em;
 }

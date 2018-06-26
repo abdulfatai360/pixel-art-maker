@@ -9,24 +9,55 @@
   </head>
 
   <body>
-    <h1>Lab: Pixel Art Maker</h1>
+    <header>
+      <div class="menu-item" title="Toggle Menu Bars">
+        <img src="icons/menu-icon.png" alt="">
+      </div>
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker" class="sizePicker">
-      <label for="inputHeight">Grid Height:</label>
-      <input type="number" id="inputHeight" name="height" min="1" value="20" autofocus>
+      <div class="toolbar-container">
+        <div class="toolbar-item" title="Select Grid Height">
+          <label for="inputHeight">Grid Height:</label>
+          <input type="number" id="inputHeight" name="height" min="1" value="20" autofocus>
+        </div>
+        
+        <div class="toolbar-item" title="Select Grid Width">
+          <label for="inputWidth">Grid Width:</label>
+          <input type="number" id="inputWidth" name="width" min="1" value="20">
+        </div>
 
-      <label for="inputWidth">Grid Width:</label>
-      <input type="number" id="inputWidth" name="width" min="1" value="20">
+        <div class="toolbar-item" title="Make Grid">
+          <input type="submit" value="Make Grid">
+        </div>
+        
+        <div class="toolbar-item"></div>
+        
+        <div class="toolbar-item" title="Color Grid">
+          <img src="icons/pen-icon.png" alt="" class="icon">
+        </div>
 
-      <input type="submit" value="Submit Query">
-    </form>
+        <div class="toolbar-item" title="Change Color">
+          <label for="colorPicker">Select Grid Color:</label>
+          <input type="color" id="colorPicker" name="color" class="color-picker">
+        </div>
+        
+        <div class="toolbar-item" title="Clear Grid">
+          <img src="icons/eraser-icon.png" alt="" class="icon">
+        </div>
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker" name="color">
+        <div class="toolbar-item" title="Clear Design Canvas">
+          <img src="icons/cleancanvas-icon.png" alt="" class="icon">
+        </div>
+      </div>
 
-    <h2 class="design-canvas">Design Canvas</h2>
-    <table id="pixelCanvas" class="pixelCanvas"></table>
+      <div class="app-title">
+        <h1>Pixel Art Maker</h1>
+      </div>
+    </header>
+
+    <main>
+      <h2 class="design-canvas">Design Canvas</h2>
+      <table id="pixelCanvas" class="pixelCanvas"></table>
+    </main>
 
     <script src="script.js" async></script>
   </body>
