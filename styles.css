@@ -76,8 +76,46 @@ th {
 }
 
 /*
+  DANIEL EDEN ANIMATE.CSS (TADA EFFECT)
+-----------------------------------------------------------------*/
+/**
+  * Animate.css - http://daneden.me/animate
+  * Licensed under the MIT license - http://opensource.org/licenses/MIT
+  * Copyright (c) 2014 Daniel Eden
+*/
+@keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+/*
   PROJECT SPECIFIC STYLES
-----------------------------*/
+----------------------------------------------------*/
+/**
+  The application header styling information
+*/
 * {
   box-sizing: border-box;
 }
@@ -99,7 +137,7 @@ header {
   text-align: center;
   cursor: pointer;
   padding: 0.2em;
-  border-right: 2px solid #585858;
+  border: 2px solid #585858;
 }
 
 .menu-item img,
@@ -115,8 +153,14 @@ header {
   top: 60px;
   left: 0;
   width: 60px;
-  height: auto;
+  height: 635px;
   background: #333333;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) height;
+}
+
+.close-menu-toolbar .toolbar-container {
+  height: 0;
+  overflow: hidden;
 }
 
 .toolbar-item {
@@ -124,7 +168,7 @@ header {
   height: 60px;
   line-height: 60px;
   text-align: center;
-  border-top: 2px solid #585858;
+  border-bottom: 2px solid #585858;
   padding: 0.1em;
   cursor: pointer;
 }
@@ -146,10 +190,33 @@ header {
   padding: 0.1em;
 }
 
+/**
+  Below style rules are used to overwrite some browser default styles
+*/
+.toolbar-item input[type="color"] {
+  border-width: 0;
+  border-style: none;
+  border-color: rgb(169, 169, 169);
+  border-image: none;
+  padding: 0;
+}
+
 .toolbar-item .icon {
-  max-width: 50px;
-  max-height: 50px;
-  vertical-align: top;
+  max-width: 35px;
+  max-height: 35px;
+  vertical-align: middle;
+}
+
+.menu-item:hover img,
+.menu-item:hover img,
+.toolbar-item:hover .icon,
+.toolbar-item:focus .icon {
+  -webkit-animation-name: tada;
+          animation-name: tada;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .app-title {
@@ -160,42 +227,55 @@ header {
   height: 60px;
   background: #1e7daf;
   text-align: center;
+  border-bottom: 2px solid #585858;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) width;
+}
+
+.close-menu-toolbar .app-title {
+  width: 0;
+  overflow: hidden;
 }
 
 .app-title h1 {
   margin: 0;
-  letter-spacing: 1em;
-  word-spacing: 0.5em
+  letter-spacing: 0.5em;
+  word-spacing: 0.25em
 }
 
+/**
+  The application Pixel Art Design Canvas styling information
+*/
 main {
   font-size: 2rem;
 }
 
-
-
 h2 {
   margin: 1em 0 0.25em;
-}
-
-h2:first-of-type {
-  margin-top: 0.5em;
+  opacity: 0;
+  position: absolute;
+  left: -2000px;
 }
 
 table,
 tr,
 td {
-  border: 1px solid black;
+  border: 2px solid #585858;
 }
 
 table {
   margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 tr {
-  height: 20px;
+  height: 10px;
 }
 
 td {
-  width: 20px;
+  width: 10px;
 }

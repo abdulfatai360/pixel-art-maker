@@ -10,25 +10,33 @@
 
   <body>
     <header>
-      <div class="menu-item" title="Toggle Menu Bars">
+      <div class="menu-item" title="Toggle Menu/Toolbar">
         <img src="icons/menu-icon.png" alt="">
       </div>
 
       <div class="toolbar-container">
+        <!--
+          maxValue of height = (635 - height of toolbar) / height of tr
+        -->
         <div class="toolbar-item" title="Select Grid Height">
           <label for="inputHeight">Grid Height:</label>
-          <input type="number" id="inputHeight" name="height" min="1" value="20" autofocus>
+          <input type="number" id="inputHeight" name="height" min="1" max="58" value="58" autofocus>
         </div>
         
+        <!--
+          maxValue of width = (1366 - width of toolbar) / width of td
+        -->
         <div class="toolbar-item" title="Select Grid Width">
           <label for="inputWidth">Grid Width:</label>
-          <input type="number" id="inputWidth" name="width" min="1" value="20">
+          <input type="number" id="inputWidth" name="width" min="1" max="131" value="131">
         </div>
 
         <div class="toolbar-item" title="Make Grid">
-          <input type="submit" value="Make Grid">
+          <input type="button" value="Make Grid">
         </div>
         
+        <div class="toolbar-item"></div>
+
         <div class="toolbar-item"></div>
         
         <div class="toolbar-item" title="Color Grid">
