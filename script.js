@@ -47,14 +47,15 @@ const CANVAS_CREATOR = document.querySelector('input[type=button]');
 CANVAS_CREATOR.addEventListener('click', makeGrid);
 
 /*
-  TODO: Implement "colorGrid()" to Dynamically Apply Color to Grids
+  TODO: Implement Feature that Dynamically Highlight or Paint Grids
   -------------------------------------------------------------------
 */
+// NOTE: I use the "var" keyword here for Hoisting advantage
+var color;
 function activeColor() {
   const COLOR_PICKER = document.querySelector('#colorPicker');
-  let color = COLOR_PICKER.value;
+  color = COLOR_PICKER.value;
   console.log('activeColor', color);
-  return color;
 }
 
 // TODO: Block-scoped the "COLOR_PICKER" variable. I use this mechanism
@@ -64,18 +65,15 @@ function activeColor() {
   COLOR_PICKER.addEventListener('change', activeColor);
 }
 
-function colorGrid(event) {
+function paintGrid(event) {
   let activeGrid = event.target;
   if (activeGrid.nodeName === 'TD') {
-    activeGrid.style.backgroundColor = activeColor();
+    activeGrid.style.backgroundColor = color;
   }
 }
 
-
-// TODO: Add Event Listener to "pixelCanvas" to apply color a clicked
-// grid, leveraging on the power of Event Bubbling phase
-//grid.addEventListener('mouseenter', colorGrid);
+// TODO: Add Event Listeners to grid using event delegation technique
 {
   const PIXEL_CANVAS = document.querySelector('#pixelCanvas');
-  PIXEL_CANVAS.addEventListener('click', colorGrid);
+  PIXEL_CANVAS.addEventListener('click', paintGrid);
 }
