@@ -94,3 +94,22 @@ function removeGridPaint() {
   const PIXEL_CANVAS = document.querySelector('#pixelCanvas');
   PIXEL_CANVAS.addEventListener('click', paintGrid);
 }
+
+/*
+  TODO: Implement Feature that Removes all Colored Grids on the Canvas
+  ---------------------------------------------------------------------
+*/
+function clearCanvas() {
+  let wantToClear = window.confirm(
+    '\nWARNING MESSAGE:\n' + 'Do you sure want to clear the Design Canvas?'
+  );
+  
+  if (wantToClear) {
+    const TDS = document.querySelectorAll('td');
+    TDS.forEach(TD => {
+      TD.style.backgroundColor = '';
+    }); 
+  } else {
+    return;
+  }
+}
