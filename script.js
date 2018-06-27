@@ -47,7 +47,7 @@ const CANVAS_CREATOR = document.querySelector('input[type=button]');
 CANVAS_CREATOR.addEventListener('click', makeGrid);
 
 /*
-  TODO: Implement Feature that Dynamically Highlight or Paint Grids
+  TODO: Implement Feature that Dynamically Paint Grid
   -------------------------------------------------------------------
 */
 // NOTE: I use the "var" keyword here for Hoisting advantage
@@ -58,7 +58,7 @@ function activeColor() {
   console.log('activeColor', color);
 }
 
-// TODO: Block-scoped the "COLOR_PICKER" variable. I use this mechanism
+// TODO: Block-scoped the "COLOR_PICKER" variable. I use this technique
 // in the code going forward to avoid littering the global context.
 {
   const COLOR_PICKER = document.querySelector('#colorPicker');
@@ -69,6 +69,23 @@ function paintGrid(event) {
   let activeGrid = event.target;
   if (activeGrid.nodeName === 'TD') {
     activeGrid.style.backgroundColor = color;
+  }
+}
+
+// TODO: Add Event Listeners to grid using event delegation technique
+{
+  const PIXEL_CANVAS = document.querySelector('#pixelCanvas');
+  PIXEL_CANVAS.addEventListener('click', paintGrid);
+}
+
+/*
+  TODO: Implement Feature that Remove the Color on a Grid
+  -------------------------------------------------------------
+*/
+function removeGridPaint() {
+  let activeGrid = event.target;
+  if (activeGrid.nodeName === 'TD') {
+    activeGrid.style.backgroundColor = '';
   }
 }
 
