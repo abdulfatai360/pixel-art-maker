@@ -209,8 +209,10 @@ header {
 
 .menu-item:hover img,
 .menu-item:focus img,
+.menu-item:active img,
 .toolbar-item:hover .icon,
-.toolbar-item:focus .icon {
+.toolbar-item:focus .icon,
+.toolbar-item:active .icon {
   -webkit-animation-name: tada;
           animation-name: tada;
   -webkit-animation-duration: 1s;
@@ -223,24 +225,35 @@ header {
   position: absolute;
   top: 0;
   left: 60px;
+  min-width: 1300px;
   width: calc(100% - 60px);
   height: 60px;
   background: #1e7daf;
   text-align: center;
   border-bottom: 2px solid #585858;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) width;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
 }
 
 .close-menu-toolbar .app-title {
+  min-width: 0;
   width: 0;
+  opacity: 0;
   overflow: hidden;
 }
 
 .app-title h1 {
   margin: 0;
   letter-spacing: 0.5em;
-  word-spacing: 0.25em
+  word-spacing: 0.25em;
+  /* transition: 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) all; */
 }
+
+/* .close-menu-toolbar .app-title h1 {
+  min-width: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+} */
 
 /**
   The application Pixel Art Design Canvas styling information
@@ -264,18 +277,19 @@ td {
 
 .pixel-canvas-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 60px;
+  left: 60px;
   bottom: 0;
   right: 0;
   z-index: -1;
+  min-width: 1300px;
+  overflow: hidden;
 }
 
 table {
   margin: 0 auto;
   table-layout: fixed;
-  width: 100%;
-  height: 100%;
+  overflow-x: scroll;
 }
 
 tr {
