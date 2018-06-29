@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pixel Art Maker | Google Africa Scholarship 2018</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/font-face-syntax.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
     <header>
       <div class="menu-item" title="Toggle Menu/Toolbar">
-        <img src="icons/menu-icon.png" alt="">
+        <img src="icons/menu-icon-small.png" alt="">
+      </div>
+
+      <div class="app-title">
+        <h1>
+          Pixel Art Maker
+          <span>...tool for creating a digital masterpiece</span>
+        </h1>
       </div>
 
       <div class="toolbar-container">
         <!--
-          maxValue of height = (635 - height of toolbar) / height of tr
+          inputHeight.max = (635 - height of toolbar) / height of tr
         -->
         <div class="toolbar-item" title="Select Grid Height">
           <label for="inputHeight">Grid Height:</label>
@@ -24,41 +32,39 @@
         </div>
         
         <!--
-          maxValue of width = (1366 - width of toolbar) / width of td
+          inputWidth.max = (1366 - width of toolbar) / width of td
         -->
         <div class="toolbar-item" title="Select Grid Width">
           <label for="inputWidth">Grid Width:</label>
           <input type="number" id="inputWidth" name="width" min="1" max="131" value="131">
         </div>
 
-        <div class="toolbar-item" title="Make Grid">
-          <input type="button" value="Submit">
+        <div class="toolbar-item" title="Create Grids">
+          <input type="button" value="Apply">
         </div>
         
-        <div class="toolbar-item"></div>
-
-        <div class="toolbar-item"></div>
+        <div class="toolbar-item void-toolbar-item"></div>
         
-        <div class="toolbar-item" title="Color Grid">
-          <img src="icons/pen-icon.png" alt="" class="icon">
-        </div>
-
         <div class="toolbar-item" title="Change Color">
           <label for="colorPicker">Select Grid Color:</label>
           <input type="color" id="colorPicker" name="color" class="color-picker">
         </div>
+
+        <div class="toolbar-item paint-tool" title="Paint Grid">
+          <img src="icons/pen-icon.png" alt="" class="icon">
+        </div>
         
-        <div class="toolbar-item" title="Clear Grid">
+        <div class="toolbar-item erase-tool" title="Clear Grid">
           <img src="icons/eraser-icon.png" alt="" class="icon">
         </div>
 
-        <div class="toolbar-item" title="Clear Design Canvas">
+        <div class="toolbar-item eye-dropper-tool" title="Color Eye Dropper">
+          <img src="icons/eyedropper-icon.png" alt="" class="icon">
+        </div>
+
+        <div class="toolbar-item clear-canvas-tool" title="Clear Design Canvas">
           <img src="icons/cleancanvas-icon.png" alt="" class="icon">
         </div>
-      </div>
-
-      <div class="app-title">
-        <h1>Pixel Art Maker</h1>
       </div>
     </header>
 
