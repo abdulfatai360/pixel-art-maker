@@ -283,6 +283,10 @@ header {
     line-height: 50px;
   }
 
+  .app-title h1 {
+    font-size: 0.9em;
+  }
+
   .app-title span {
     display: none;
   }
@@ -316,12 +320,13 @@ td {
   bottom: 0;
   right: 0;
   z-index: -1;
-  min-width: 1300px;
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
   align-items: center;
 }
+
+/* Modify pixel canvas min-width media queries */
 
 .pixel-canvas {
   margin: 0 auto;
