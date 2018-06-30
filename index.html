@@ -11,8 +11,8 @@
 
   <body>
     <header>
-      <div class="menu-item" title="Toggle Menu/Toolbar">
-        <img src="icons/menu-icon-small.png" alt="">
+      <div class="menu-item animate-icon" title="Toggle Menu/Toolbar">
+        <img src="icons/menu-icon-small.png" alt="" class="icon">
       </div>
 
       <div class="app-title">
@@ -28,41 +28,41 @@
         -->
         <div class="toolbar-item" title="Select Grid Height">
           <label for="inputHeight">Grid Height:</label>
-          <input type="number" id="inputHeight" name="height" min="1" max="58" value="58" autofocus>
+          <input type="number" id="inputHeight" name="height" min="1" max="58" value="58" autofocus tabindex="0">
         </div>
         
-        <!--
+        <!-- animate
           inputWidth.max = (1366 - width of toolbar) / width of td
         -->
         <div class="toolbar-item" title="Select Grid Width">
           <label for="inputWidth">Grid Width:</label>
-          <input type="number" id="inputWidth" name="width" min="1" max="131" value="131">
+          <input type="number" id="inputWidth" name="width" min="1" max="131" value="131" tabindex="1">
         </div>
 
         <div class="toolbar-item" title="Create Grids">
-          <input type="button" value="Apply">
+          <input type="button" value="Apply" tabindex="2">
         </div>
-        
-        <div class="toolbar-item void-toolbar-item"></div>
+
+        <div class="toolbar-item separator"></div>
         
         <div class="toolbar-item" title="Change Color">
           <label for="colorPicker">Select Grid Color:</label>
-          <input type="color" id="colorPicker" name="color" class="color-picker">
+          <input type="color" id="colorPicker" name="color" class="color-picker" tabindex="3">
         </div>
 
-        <div class="toolbar-item paint-tool" title="Paint Grid">
+        <div class="toolbar-item tool paint-tool animate-icon" title="Paint Grid" tabindex="4">
           <img src="icons/pen-icon.png" alt="" class="icon">
         </div>
         
-        <div class="toolbar-item erase-tool" title="Clear Grid">
+        <div class="toolbar-item tool erase-tool animate-icon" title="Clear Grid" tabindex="5">
           <img src="icons/eraser-icon.png" alt="" class="icon">
         </div>
 
-        <div class="toolbar-item eye-dropper-tool" title="Color Eye Dropper">
+        <div class="toolbar-item tool eye-dropper-tool animate-icon" title="Color Eye Dropper" tabindex="6">
           <img src="icons/eyedropper-icon.png" alt="" class="icon">
         </div>
 
-        <div class="toolbar-item clear-canvas-tool" title="Clear Design Canvas">
+        <div class="toolbar-item tool clear-canvas-tool animate-icon" title="Clear Design Canvas" tabindex="7">
           <img src="icons/cleancanvas-icon.png" alt="" class="icon">
         </div>
       </div>

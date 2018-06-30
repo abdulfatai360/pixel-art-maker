@@ -1,5 +1,6 @@
 /**
   * General Styling Setup
+  --------------------------
 */
 *,
 *::before,
@@ -9,17 +10,20 @@
 
 html {
   font-size: 62.5%;
+  font-weight: 400;
   width: 100%;
   height: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 @media (max-width: 424.98px) {
   html {
     font-size: 53.13%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 
@@ -30,46 +34,11 @@ body {
 }
 
 /**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- * 4. Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
-*/
-input {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-  line-height: normal;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
-*/
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`.
 */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
-}
-
-/**
- * 1. Correct inability to style clickable `input` types in iOS.
- * 2. Improve usability and consistency of cursor style between image-type `input` and others.
-*/
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
 }
 
 /**
@@ -104,14 +73,10 @@ input[type="submit"] {
   }
 }
 
-/*
-  PROJECT SPECIFIC STYLES
-----------------------------------------------------*/
 /**
-  The application header styling information
+  * Sectional Styles: Header Styling Information
+  -------------------------------------------------
 */
-
-
 header {
   font-size: 2rem;
   height: auto;
@@ -120,64 +85,23 @@ header {
 }
 
 .menu-item {
-  display: inline-block;
   position: relative;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  cursor: pointer;
-  padding: 0.2em;
+  display: inline-flex;
+  background-color: #000828;
   border: 2px solid #f98662;
   border-top: 0;
   border-left: 0;
-  background-color: #000828;
 }
 
-.menu-item img,
-.toolbar-item .icon {
-  display: inline-block;
-  max-width: 55px;
-  max-height: 55px;
-  vertical-align: baseline;
-  border: 0;
-}
-
-.app-title {
-  position: absolute;
-  top: 0;
-  left: 60px;
-  min-width: 960px;
-  width: calc(100% - 60px);
+.menu-item,
+.toolbar-item {
+  width: 60px;
   height: 60px;
+  padding: 0.1em;
   text-align: center;
-  border-bottom: 2px solid #f98662;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
-  background-color: #000828;
-}
-
-.close-menu-toolbar .app-title {
-  min-width: 0;
-  width: 0;
-  opacity: 0;
-  overflow: hidden;
-}
-
-.app-title h1 {
-  font-family: 'pokemon_hollow_normal', Arial, Verdana, sans-serif;
-  margin: 0;
-  letter-spacing: 0.3em;
-  word-spacing: 0.15em;
-}
-
-.app-title h1 span {
-  color: #ffb790;
-  font-family: "blacksword_regular", "Brush Script MT", cursive;
-  letter-spacing: 0.2em;
-  word-spacing: 0;
-  font-size: 0.45em;
-  font-weight: 300;
+  cursor: pointer;
 }
 
 .toolbar-container {
@@ -196,62 +120,82 @@ header {
 }
 
 .toolbar-item {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
   border-bottom: 2px solid #fff;
-  cursor: pointer;
-  padding: 0.1em;
-}
-
-.void-toolbar-item {
-  cursor: default;
 }
 
 .toolbar-item label {
-  opacity: 0;
   position: absolute;
-  left: -2000px;
+  left: -200px;
+  opacity: 0;
 }
 
 .toolbar-item input {
   display: inline-block;
-  vertical-align: top;
+  font: inherit;
+  font-size: 0.8em;
+  line-height: normal;
   width: 100%;
   height: 100%;
-  font-weight: bold;
   background-color: #fff;
   color: #000;
-  outline: 0;
-  font-size: 0.8em;
+  vertical-align: top;
   border: 0;
+  margin: 0;
+  letter-spacing: 0.1em;
 }
 
 .toolbar-item input[type="number"] {
   padding: 0.4em;
-  letter-spacing: 0.2em;
+}
+
+.toolbar-item input[type="number"]:hover,
+.toolbar-item input[type="number"]:focus {
+  background-color: #ffb790;
 }
 
 .toolbar-item input[type="button"] {
-  padding: 0.1em;
-  letter-spacing: 0.1em;
   background-color: #525a7d;
   color: #fff;
+  padding: 0.1em;
+  cursor: pointer;
+  box-shadow: inset 1px 2px 7px #000828,
+              inset -1px -2px 7px #000828;
+}
+
+.toolbar-item input[type="button"]:hover,
+.toolbar-item input[type="button"]:focus {
+  background-color: #c35737;
+  box-shadow: none;
+}
+
+.toolbar-container .separator {
+  height: calc(100% - 480px);
+  cursor: default;
+}
+
+.tool:hover {
+  background-color: #c35737;
+}
+
+.toolbar-container .activated {
+  background-color: #c35737;
+}
+
+.icon {
+  display: inline-block;
+  max-width: 50px;
+  max-height: 50px;
+  vertical-align: text-bottom;
+  border: 0;
 }
 
 .toolbar-item .icon {
-  max-width: 35px;
-  max-height: 35px;
-  vertical-align: middle;
+  max-width: 30px;
+  max-height: 30px;
 }
 
-.menu-item:hover img,
-.menu-item:focus img,
-.menu-item:active img,
-.toolbar-item:hover .icon,
-.toolbar-item:focus .icon,
-.toolbar-item:active .icon {
+.animate-icon:hover .icon,
+.animate-icon:focus .icon {
   -webkit-animation-name: tada;
           animation-name: tada;
   -webkit-animation-duration: 1s;
@@ -260,8 +204,45 @@ header {
           animation-fill-mode: both;
 }
 
+.app-title {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  min-width: 1024px;
+  width: calc(100% - 60px);
+  height: 60px;
+  text-align: center;
+  background-color: #000828;
+  border-bottom: 2px solid #f98662;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+
+.close-menu-toolbar .app-title {
+  min-width: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.app-title h1 {
+  font-family: 'pokemon_hollow_normal', Arial, Verdana, sans-serif;
+  margin: 0;
+  letter-spacing: 0.2em;
+  word-spacing: 0.1em;
+}
+
+.app-title span {
+  color: #ffb790;
+  font-family: "blacksword_regular", "Brush Script MT", cursive;
+  letter-spacing: 0.2em;
+  word-spacing: 0;
+  font-size: 0.5em;
+  font-weight: 300;
+}
+
 /**
-  The application Pixel Art Design Canvas styling information
+  * Sectional Styles: Design Canvas Styling Information
+  -------------------------------------------------------
 */
 main {
   font-size: 2rem;
@@ -269,9 +250,9 @@ main {
 
 h2 {
   margin: 1em 0 0.25em;
-  opacity: 0;
   position: absolute;
-  left: -2000px;
+  left: -300px;
+  opacity: 0;
 }
 
 table,
@@ -288,35 +269,40 @@ td {
   right: 0;
   z-index: -1;
   min-width: 1300px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
 }
 
-table {
+.pixel-canvas {
   margin: 0 auto;
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
 }
 
-tr {
-  height: 15px;
-}
-
-td {
-  width: 15px;
-  padding: 0;
-}
-
-.pen-mode {
-  cursor: url(icons/pen-icon-cursor.png), auto;
+.paint-mode {
+  cursor: url(../icons/pen-icon-cursor.png), auto;
 }
 
 .erase-mode {
-  cursor: url(icons/eraser-icon-cursor.png), auto;
+  cursor: url(../icons/eraser-icon-cursor.png), auto;
 }
 
 .eye-dropper-mode {
-  cursor: url(icons/eyedropper-icon-cursor.png), auto;
+  cursor: url(../icons/eyedropper-icon-cursor.png), auto;
+}
+
+tr {
+  height: 10px;
+  min-height: 10px;
+}
+
+td {
+  width: 10px;
+  min-width: 10px;
+  padding: 0;
 }
 
 .on-mode {
