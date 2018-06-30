@@ -7,24 +7,24 @@
 
 @font-face {
   font-family: "blacksword_regular";
-  src: url(../fonts/blacksword-webfont.woff2) format(woff2),
-        url(../fonts/blacksword-webfont.woff) format(woff);
+  src: url(../fonts/blacksword-webfont.woff2) format('woff2'),
+        url(../fonts/blacksword-webfont.woff) format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "kg_miss_kindergarten_regular";
-  src: url(../fonts/kgmisskindergarten-webfont.woff2) format(woff2),
-        url(../fonts/kgmisskindergarten-webfont.woff) format(woff);
+  src: url(../fonts/kgmisskindergarten-webfont.woff2) format('woff2'),
+        url(../fonts/kgmisskindergarten-webfont.woff) format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "pokemon_hollow_normal";
-  src: url(../fonts/pokemon_hollow-webfont.woff2) format(woff2),
-        url(../fonts/pokemon_hollow-webfont.woff) format(woff);
+  src: url(../fonts/pokemon_hollow-webfont.woff2) format('woff2'),
+        url(../fonts/pokemon_hollow-webfont.woff) format('woff');
   font-weight: normal;
   font-style: normal;
 }
