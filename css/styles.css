@@ -21,7 +21,7 @@ html {
 
 @media (max-width: 424.98px) {
   html {
-    font-size: 53.13%;
+    font-size: 50%;
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -80,7 +80,6 @@ input[type="number"]::-webkit-outer-spin-button {
 header {
   font-size: 2rem;
   height: auto;
-  line-height: 60px;
   color: #fff;
 }
 
@@ -99,6 +98,7 @@ header {
 .toolbar-item {
   width: 60px;
   height: 60px;
+  line-height: 60px;
   padding: 0.1em;
   text-align: center;
   cursor: pointer;
@@ -112,6 +112,21 @@ header {
   height: calc(100% - 60px);
   background-color: #273151;
   transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) height;
+}
+
+@media (max-width: 424.98px) {
+  .menu-item,
+  .toolbar-item {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .toolbar-container {
+    top: 40px;
+    width: 40px;
+    height: calc(100% - 40px);
+  }
 }
 
 .close-menu-toolbar .toolbar-container {
@@ -173,6 +188,12 @@ header {
   cursor: default;
 }
 
+@media (max-width: 424.98px) {
+  .toolbar-container .separator {
+    height: calc(100% - 320px);
+  }
+}
+
 .tool:hover {
   background-color: #c35737;
 }
@@ -192,6 +213,18 @@ header {
 .toolbar-item .icon {
   max-width: 30px;
   max-height: 30px;
+}
+
+@media (max-width: 424.98px) {
+  .icon {
+    max-width: 30px;
+    max-height: 30px;
+  }
+
+  .toolbar-item .icon {
+    max-width: 25px;
+    max-height: 25px;
+  }
 }
 
 .animate-icon:hover .icon,
@@ -240,6 +273,18 @@ header {
   font-weight: 300;
 }
 
+@media (max-width: 424.98px) {
+  .app-title {
+    left: 40px;
+    width: calc(100% - 40px);
+    height: 40px;
+  }
+
+  .app-title span {
+    display: none;
+  }
+}
+
 /**
   * Sectional Styles: Design Canvas Styling Information
   -------------------------------------------------------
@@ -263,8 +308,8 @@ td {
 
 .pixel-canvas-container {
   position: absolute;
-  top: 60px;
-  left: 60px;
+  top: 0;
+  left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
@@ -295,13 +340,13 @@ td {
 }
 
 tr {
-  height: 10px;
-  min-height: 10px;
+  height: 15px;
+  min-height: 15px;
 }
 
 td {
-  width: 10px;
-  min-width: 10px;
+  width: 15px;
+  min-width: 15px;
   padding: 0;
 }
 

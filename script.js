@@ -26,6 +26,9 @@ function colorToBeUsed() {
 {
   const COLOR_PICKER = document.querySelector('#colorPicker');
   COLOR_PICKER.addEventListener('change', colorToBeUsed);
+  COLOR_PICKER.addEventListener('mouseover', function () {
+    COLOR_PICKER.parentNode.title = `Change Color (Active Color: ${(activeColor === undefined) ? '#000000' : activeColor})`;
+  });
 }
 
 /*
