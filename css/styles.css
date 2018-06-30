@@ -244,6 +244,7 @@ header {
   min-width: 1024px;
   width: calc(100% - 60px);
   height: 60px;
+  line-height: 60px;
   text-align: center;
   background-color: #000828;
   border-bottom: 2px solid #f98662;
@@ -279,10 +280,7 @@ header {
     min-width: calc(100% - 50px);
     width: calc(100% - 50px);
     height: 50px;
-  }
-
-  .app-title h1 {
-    font-size: 0.8em;
+    line-height: 50px;
   }
 
   .app-title span {
