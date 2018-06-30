@@ -117,15 +117,15 @@ header {
 @media (max-width: 424.98px) {
   .menu-item,
   .toolbar-item {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
   }
 
   .toolbar-container {
-    top: 40px;
-    width: 40px;
-    height: calc(100% - 40px);
+    top: 50px;
+    width: 50px;
+    height: calc(100% - 50px);
   }
 }
 
@@ -190,7 +190,7 @@ header {
 
 @media (max-width: 424.98px) {
   .toolbar-container .separator {
-    height: calc(100% - 320px);
+    height: calc(100% - 400px);
   }
 }
 
@@ -217,13 +217,13 @@ header {
 
 @media (max-width: 424.98px) {
   .icon {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 40px;
+    max-height: 40px;
   }
 
   .toolbar-item .icon {
-    max-width: 25px;
-    max-height: 25px;
+    max-width: 30px;
+    max-height: 30px;
   }
 }
 
@@ -275,9 +275,14 @@ header {
 
 @media (max-width: 424.98px) {
   .app-title {
-    left: 40px;
-    width: calc(100% - 40px);
-    height: 40px;
+    left: 50px;
+    min-width: calc(100% - 50px);
+    width: calc(100% - 50px);
+    height: 50px;
+  }
+
+  .app-title h1 {
+    font-size: 0.8em;
   }
 
   .app-title span {
