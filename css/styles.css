@@ -285,7 +285,7 @@ header {
   }
 
   .app-title h1 {
-    font-size: 1em;
+    font-size: 1.1em;
     /* Perhaps increase H1 size a bit */
   }
 
@@ -323,7 +323,7 @@ td {
   right: 0;
   z-index: -1;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   display: flex;
   align-items: center;
 }
