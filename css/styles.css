@@ -111,7 +111,7 @@ header {
   width: 60px;
   height: calc(100% - 60px);
   background-color: #273151;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) height;
+  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1) height;
 }
 
 @media (max-width: 424.98px) {
@@ -285,7 +285,7 @@ header {
   }
 
   .app-title h1 {
-    font-size: 1.1em;
+    font-size: 1.3em;
     /* Perhaps increase H1 size a bit */
   }
 
