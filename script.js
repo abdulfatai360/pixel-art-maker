@@ -230,6 +230,11 @@ CANVAS_CREATOR.addEventListener('click', makeGrid);
  */
 const DESIGN_TOOLS = document.querySelectorAll('.tool');
 
+/**
+ * @global
+ * @function hiLiteActiveTool
+ * @description Adds or removes class name to the items of DESIGN_TOOLS. This lets the user has a visual clue of the tool that is currently active.
+ */
 function hiLiteActiveTool() {
   for (let i = 0; i < DESIGN_TOOLS.length; i++) {
     if (this === DESIGN_TOOLS[i]) {
@@ -240,13 +245,31 @@ function hiLiteActiveTool() {
   }
 }
 
+/**
+ * @global
+ * @callback {eventCallback}
+ * @name paintToolActivated
+ * @description Activates the functionality that applies color on a selected grid and calls hiLiteActiveTool().
+ */
 function paintToolActivated() {
   const PIXEL_CANVAS = document.querySelector('#pixelCanvas');
   PIXEL_CANVAS.classList.remove('erase-mode', 'eye-dropper-mode');
 
+  /**
+    * @method bind
+    * @param {Object} PAINT_TOOL
+    * @description Binds the "this" keyword in the function that is it is called on to its object parameter.
+    * @returns {function} Function whose "this" keyword refers to PAINT_TOOL.
+   */
   let boundHiLiteActiveTool = hiLiteActiveTool.bind(PAINT_TOOL);
   boundHiLiteActiveTool();
 
+  /**
+    * @private
+    * @callback {eventCallback}
+    * @name paintGrid
+    * @description Applies the value of activeColor to a clicked grid.
+    */
   function paintGrid(event) {
     let activeGrid = event.target;
     if (activeGrid.nodeName === 'TD' &&
@@ -378,8 +401,12 @@ CLEAR_CANVAS_TOOL.addEventListener('keydown', function (event) {
 */
 const SIGNATURE_BOX = document.querySelector('.user-signature');
 
-function appendMySignature(string) {
-  SIGNATURE_BOX.textContent = string;
+function appendMySignature(signature) {
+  if (signature === '' || signature === null) {
+    return;
+  } else {
+    SIGNATURE_BOX.textContent = signature;  
+  }
 }
 
 SIGNATURE_BOX.addEventListener('click', function () {
