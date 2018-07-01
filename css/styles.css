@@ -1,6 +1,6 @@
-/**
-  * General Styling Setup
-  --------------------------
+/*
+  General Styling Setup
+  ----------------------
 */
 *,
 *::before,
@@ -33,15 +33,15 @@ body {
   margin: 0;
 }
 
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`.
+/*
+ Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`.
 */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/**
+/*
   * Animate.css - http://daneden.me/animate
   * Licensed under the MIT license - http://opensource.org/licenses/MIT
   * Copyright (c) 2014 Daniel Eden
@@ -73,9 +73,9 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-/**
-  * Sectional Styles: Header Styling Information
-  -------------------------------------------------
+/*
+  Sectional Styles: Header Styling Information
+  ---------------------------------------------
 */
 header {
   font-size: 2rem;
@@ -293,9 +293,9 @@ header {
   }
 }
 
-/**
-  * Sectional Styles: Design Canvas Styling Information
-  -------------------------------------------------------
+/*
+  Sectional Styles: Design Canvas Styling Information
+  ---------------------------------------------------
 */
 main {
   font-size: 2rem;
@@ -374,4 +374,5 @@ main .user-signature {
   border: 1px solid rgba(88, 88, 88, 0.5);
   font: 400 6rem/9rem "taken_by_vultures_alternates", "Brush Script MT", cursive;
   text-align: center;
+  cursor: pointer;
 }

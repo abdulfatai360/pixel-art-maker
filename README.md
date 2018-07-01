@@ -23,5 +23,6 @@
 * Hosting platform: GitHub pages
 
 ## Credits and Attributions
-* Design inspiration and Toolbar icons from [http://pixelartmaker.com](http://pixelartmaker.com/)
-* hamburger menu icon and pixel art favicon by Arthur Shlain from the [Noun Project](https://thenounproject.com/)
+* Design inspiration and toolbar icons from [Pixel Art](http://pixelartmaker.com/)
+* hamburger menu icon by Arthur Shlain from the [Noun Project](https://thenounproject.com/)
+* pixel art favicon by Arthur Shlain from the [Noun Project](https://thenounproject.com/)

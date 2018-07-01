@@ -26,6 +26,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="favicons/favicon-76.png">
     <link rel="apple-touch-icon" sizes="152x152" href="favicons/favicon-152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/favicon-180.png">
+
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="favicons/favicon-144.png">
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
@@ -45,16 +46,20 @@
       </div>
 
       <div class="toolbar-container">
-        <!--
-          inputHeight.max = 635 / height of tr
+        <!-- 
+          * inputHeight.max = 635 / height of tr
+          * The max attribute is set for performance and UI/UX purposes.
+          * Value "635" being the average innerHeight dimension of a window.
         -->
         <div class="toolbar-item" title="Select Grid Height">
           <label for="inputHeight">Grid Height:</label>
           <input type="number" id="inputHeight" name="height" min="1" max="43" value="43" autofocus tabindex="0">
         </div>
         
-        <!-- animate
-          inputWidth.max = 1366 / width of td
+        <!-- 
+          * inputWidth.max = 1366 / width of td
+          * The max attribute is set for performance and UI/UX purposes.
+          * Value "1366" being the average innerWidth dimension of a window.
         -->
         <div class="toolbar-item" title="Select Grid Width">
           <label for="inputWidth">Grid Width:</label>
