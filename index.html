@@ -46,19 +46,19 @@
 
       <div class="toolbar-container">
         <!--
-          inputHeight.max = (635 - height of toolbar) / height of tr
+          inputHeight.max = 635 / height of tr
         -->
         <div class="toolbar-item" title="Select Grid Height">
           <label for="inputHeight">Grid Height:</label>
-          <input type="number" id="inputHeight" name="height" min="1" max="58" value="58" autofocus tabindex="0">
+          <input type="number" id="inputHeight" name="height" min="1" max="43" value="43" autofocus tabindex="0">
         </div>
         
         <!-- animate
-          inputWidth.max = (1366 - width of toolbar) / width of td
+          inputWidth.max = 1366 / width of td
         -->
         <div class="toolbar-item" title="Select Grid Width">
           <label for="inputWidth">Grid Width:</label>
-          <input type="number" id="inputWidth" name="width" min="1" max="131" value="131" tabindex="1">
+          <input type="number" id="inputWidth" name="width" min="1" max="91" value="91" tabindex="1">
         </div>
 
         <div class="toolbar-item" title="Create Grids">
@@ -95,6 +95,7 @@
       <div class="pixel-canvas-container">
         <table id="pixelCanvas" class="pixel-canvas"></table>
       </div>
+      <p class="user-signature">Your Signature?</p>
     </main>
 
     <script src="script.js" async></script>

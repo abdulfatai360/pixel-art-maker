@@ -233,3 +233,18 @@ CLEAR_CANVAS_TOOL.addEventListener('keydown', function (event) {
     clearCanvas();
   }
 });
+
+/*
+  TODO: Add Feature that Appends User "Signature" on their Design
+  -------------------------------------------------------------------
+*/
+const SIGNATURE_BOX = document.querySelector('.user-signature');
+
+function appendMySignature(string) {
+  SIGNATURE_BOX.textContent = string;
+}
+
+SIGNATURE_BOX.addEventListener('click', function () {
+  let userSignature = window.prompt('Please Enter Your Choice Name');
+  appendMySignature(userSignature);
+});

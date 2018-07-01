@@ -286,7 +286,6 @@ header {
 
   .app-title h1 {
     font-size: 1.3em;
-    /* Perhaps increase H1 size a bit */
   }
 
   .app-title span {
@@ -322,13 +321,10 @@ td {
   bottom: 0;
   right: 0;
   z-index: -1;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   display: flex;
   align-items: center;
 }
-
-/* Modify pixel canvas min-width media queries */
 
 .pixel-canvas {
   margin: 0 auto;
@@ -363,4 +359,19 @@ td {
 .on-mode {
   border-width: 2px;
   border-color: #000;
+}
+
+main .user-signature {
+  display: inline-block;
+  position: fixed;
+  bottom: 40px;
+  right: 46px;
+  height: 9rem;
+  margin: 0;
+  padding: 0.5rem 3rem;
+  color: #c35737;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(88, 88, 88, 0.5);
+  font: 400 6rem/9rem "taken_by_vultures_alternates", "Brush Script MT", cursive;
+  text-align: center;
 }
