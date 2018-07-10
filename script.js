@@ -280,6 +280,16 @@ function paintToolActivated() {
 
   PIXEL_CANVAS.classList.add('paint-mode');
   PIXEL_CANVAS.addEventListener('click', paintGrid);
+
+  PIXEL_CANVAS.addEventListener('mousedown', function () {
+    paintGrid(event);
+    if (event.which === 1) {
+      PIXEL_CANVAS.addEventListener('mousemove', paintGrid);
+    }
+    PIXEL_CANVAS.addEventListener('mouseup', function() {
+      PIXEL_CANVAS.removeEventListener('mousemove', paintGrid);
+    });
+  });
 }
 
 const PAINT_TOOL = document.querySelector('.paint-tool');
@@ -379,9 +389,11 @@ function clearCanvas() {
   
   if (wantToClear) {
     const TDS = document.querySelectorAll('td');
-    TDS.forEach(TD => {
-      TD.style.backgroundColor = '';
-    }); 
+    for (let i = 0, length = TDS.length; i < length; i++) {
+      let td = TDS[i];
+      if (td.style.backgroundColor = '') {continue}
+      td.style.backgroundColor = '';
+    } 
   } else {
     return;
   }

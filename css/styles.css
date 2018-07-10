@@ -136,6 +136,7 @@ header {
 
 .toolbar-item {
   border-bottom: 2px solid #fff;
+  background-color: #273151;
 }
 
 .toolbar-item label {
@@ -364,15 +365,14 @@ td {
 main .user-signature {
   display: inline-block;
   position: fixed;
-  bottom: 40px;
-  right: 46px;
-  height: 9rem;
+  bottom: 25px;
+  right: 31px;
   margin: 0;
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 2.5rem;
   color: #c35737;
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(88, 88, 88, 0.5);
-  font: 400 6rem/9rem "taken_by_vultures_alternates", "Brush Script MT", cursive;
+  font: 400 6rem/7rem "taken_by_vultures_alternates", cursive;
   text-align: center;
   cursor: pointer;
 }
