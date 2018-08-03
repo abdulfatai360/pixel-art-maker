@@ -92,6 +92,7 @@ header {
   border: 2px solid #f98662;
   border-top: 0;
   border-left: 0;
+  z-index: 1;
 }
 
 .menu-item,
@@ -111,7 +112,7 @@ header {
   width: 60px;
   height: calc(100% - 60px);
   background-color: #273151;
-  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1) height;
+  transition: 1s ease top;
 }
 
 @media (max-width: 424.98px) {
@@ -130,8 +131,7 @@ header {
 }
 
 .close-menu-toolbar .toolbar-container {
-  height: 0;
-  overflow: hidden;
+  top: calc(-100vh - 60px);
 }
 
 .toolbar-item {
@@ -250,14 +250,11 @@ header {
   text-align: center;
   background-color: #000828;
   border-bottom: 2px solid #f98662;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+  transition: 1s ease left;
 }
 
 .close-menu-toolbar .app-title {
-  min-width: 0;
-  width: 0;
-  opacity: 0;
-  overflow: hidden;
+  left: calc(-100vw - 100px);
 }
 
 .app-title h1 {
