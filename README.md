@@ -1,6 +1,6 @@
 # Pixel Art Maker
 
-[https://oluphetty.github.io/pixel-art-maker/](https://oluphetty.github.io/pixel-art-maker/)
+[https://abdulfatai360.github.io/pixel-art-maker/](https://abdulfatai360.github.io/pixel-art-maker/)
 
 ## Application Features
 * Ability to dynamically create design canvas of varying sizes by specifying the number of grids horizontally and vertically.
